@@ -29,7 +29,7 @@ public class PlayerMv : MonoBehaviour {
 	}
 
 	private void FixedUpdate () {
-		rigidbody.angularDrag = (Input.GetButton (brakeBtn)) ? 1.0f : 0.05f;
+		rigidbody.drag = (Input.GetButton (brakeBtn)) ? 1.0f : 0.0f;
 		tm.SendMessage("SetThrust", axisForce);
 		rigidbody.AddRelativeForce(axisForce);
 		axisForce = Vector3.zero;
