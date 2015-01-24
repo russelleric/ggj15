@@ -3,13 +3,14 @@ using System.Collections;
 
 public class SpringRend : MonoBehaviour {
 
+	// line renderer options
 	public Color c1, c2;
 	public float lineWidth;
 
 	private Transform point2;
 	private LineRenderer lr;
 
-	void Start () {
+	private void Start () {
 		// find second object
 		point2 = transform.GetComponentInParent<SpringJoint>().connectedBody.transform;
 
@@ -21,7 +22,8 @@ public class SpringRend : MonoBehaviour {
 		lr.SetVertexCount(2);
 	}
 
-	void Update () {
+	private void Update () {
+		// update position
 		lr.SetPosition(0,transform.position);
 		lr.SetPosition(1,point2.position);
 	}
