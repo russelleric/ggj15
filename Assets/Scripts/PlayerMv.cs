@@ -3,10 +3,11 @@ using System.Collections;
 
 public class PlayerMv : MonoBehaviour {
 
-	public int PlayerNumber = 1;
-
 	private string[] axis;
 	private Vector3 axisForce = Vector3.zero;
+	private ThrustManager tm;
+
+	public int PlayerNumber = 1;
 
 	private void Start () {
 		if (PlayerNumber == 1) {
@@ -14,6 +15,8 @@ public class PlayerMv : MonoBehaviour {
 		} else if (PlayerNumber == 2) {
 			axis = new string[] {"P2_xAxis", "P2_yAxis", "P2_zAxis"};
 		}
+
+		tm = transform.GetComponentInChildren<ThrustManager>();
 	}
 
 	private void Update () {
@@ -23,6 +26,7 @@ public class PlayerMv : MonoBehaviour {
 	}
 
 	private void FixedUpdate () {
+		tm.SendMessage("SetThrust", axisForce);
 		rigidbody.AddRelativeForce(axisForce);
 		axisForce = Vector3.zero;
 	}
