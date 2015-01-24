@@ -2367,6 +2367,45 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1 &405596046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405596047}
+  - 114: {fileID: 405596048}
+  m_Layer: 0
+  m_Name: CameraLookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405596047
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405596046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!114 &405596048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405596046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b2d03483e25464bb005d2eb68ffcf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508396823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,7 +2422,7 @@ GameObject:
   - 145: {fileID: 508396830}
   m_Layer: 0
   m_Name: PlayerCube1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7176,6 +7215,10 @@ Prefab:
       propertyPath: m_Name
       value: PlayerCube1
       objectReference: {fileID: 0}
+    - target: {fileID: 146808, guid: ba178da644dfa467f9c644de5355f6c2, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba178da644dfa467f9c644de5355f6c2, type: 2}
   m_RootGameObject: {fileID: 508396823}
@@ -9423,6 +9466,7 @@ GameObject:
   - 92: {fileID: 1751769204}
   - 124: {fileID: 1751769203}
   - 81: {fileID: 1751769202}
+  - 114: {fileID: 1751769207}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9495,6 +9539,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1751769207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751769201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db3e91f1c60c4a6991ae06ce1c66798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraTarget: {fileID: 405596047}
 --- !u!1 &1792062788
 GameObject:
   m_ObjectHideFlags: 0
@@ -11768,6 +11824,10 @@ Prefab:
       propertyPath: m_Name
       value: PlayerCube2
       objectReference: {fileID: 0}
+    - target: {fileID: 155136, guid: 45b607d0d79f740adb35f5be1473a27e, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45b607d0d79f740adb35f5be1473a27e, type: 2}
   m_RootGameObject: {fileID: 1932417771}
@@ -11788,7 +11848,7 @@ GameObject:
   - 114: {fileID: 1932417772}
   m_Layer: 0
   m_Name: PlayerCube2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
