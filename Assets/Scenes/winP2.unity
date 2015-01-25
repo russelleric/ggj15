@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeUntilRestart: 3
-  LevelName: BasicLvl
+  LevelName: Menu
 --- !u!4 &913189938
 Transform:
   m_ObjectHideFlags: 0
