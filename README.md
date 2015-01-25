@@ -6,10 +6,12 @@ Made during the Global Game Jam 2015
 Team
 --------
 Eric Russell
-Game Designer, Developer, Artist
+* Game Designer
+* Developer
+* Artist
 
 Michael Taylor
-Sound Designer
+* Sound Designer
 
 Additional Credits
 --------
