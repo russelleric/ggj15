@@ -6,7 +6,7 @@ public class Quit : MonoBehaviour {
 	private string quitKey = "Cancel";
 	
 	void Update () {
-		if(Input.GetKey(quitKey)){
+		if(Input.GetButton(quitKey)){
 			Application.Quit();
 		}
 	}
