@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/soloLvl.unity
   - enabled: 1
+    path: Assets/Scenes/gameOver.unity
+  - enabled: 1
     path: Assets/Scenes/vsControls.unity
   - enabled: 1
     path: Assets/Scenes/vsLvl.unity
